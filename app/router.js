@@ -6,6 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('routeparam', {path: 'routeparam/:page'});
+  this.route('routequery');
 });
 
 export default Router;

@@ -1,7 +1,19 @@
-# Transitioning
+# Paging navigation
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A better way to implement pagination using Internal transitions
+
+## Question:
+What is the proper way to add “previous” and “Next” buttons for data pagination?
+
+## Answer/Research:
+You can use link tag with rel=“next” or rel=“prev” and href that has the complete url to get data.
+* if we follow this design, we will need to change our routing function and have it carry the pagination number with it
+	* ex: appurl/data?currentPage=2&size=50
+* In order to make this work in Ember by setting a “refreshModel” attribute of the concerned param, to true
+
+## Resource:
+* http://googlewebmastercentral.blogspot.com/2011/09/pagination-with-relnext-and-relprev.html
+* http://guides.emberjs.com/v2.0.0/routing/query-params/#toc_opting-into-a-full-transition
 
 ## Prerequisites
 

@@ -1,3 +1,9 @@
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">Ember Transitions</h2>
 
+{{#link-to "routeparam" "1"}} Route with parameters {{/link-to}}
+
+{{#link-to "routequery" }} Route with queries {{/link-to}}
+{{#link-to "routequery" (query-params page="1")}} Route with queries {{/link-to}}
+
+<hr>
 {{outlet}}
