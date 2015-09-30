@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ember Pagination  by fuse-mars</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Ember Pagination </h1>
+      <h2 class="project-tagline">Create Pagination using query parameters and model forced reload</h2>
+      <a href="https://github.com/fuse-mars/ember-route-transition" class="btn">View on GitHub</a>
+      <a href="https://github.com/fuse-mars/ember-route-transition/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/fuse-mars/ember-route-transition/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="paging-navigation" class="anchor" href="#paging-navigation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Paging navigation</h1>
+
+<p>A better way to implement pagination using Internal transitions</p>
+
+<h2>
+<a id="question" class="anchor" href="#question" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question:</h2>
+
+<p>What is the proper way to add “previous” and “Next” buttons for data pagination?</p>
+
+<h2>
+<a id="answerresearch" class="anchor" href="#answerresearch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Answer/Research:</h2>
+
+<p>You can use link tag with rel=“next” or rel=“prev” and href that has the complete url to get data.</p>
+
+<ul>
+<li>if we follow this design, we will need to change our routing function and have it carry the pagination number with it
+
+<ul>
+<li>ex: appurl/data?currentPage=2&amp;size=50</li>
+</ul>
+</li>
+<li>In order to make this work in Ember by setting a “refreshModel” attribute of the concerned param, to true</li>
+</ul>
+
+<h2>
+<a id="resource" class="anchor" href="#resource" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resource:</h2>
+
+<ul>
+<li><a href="http://googlewebmastercentral.blogspot.com/2011/09/pagination-with-relnext-and-relprev.html">http://googlewebmastercentral.blogspot.com/2011/09/pagination-with-relnext-and-relprev.html</a></li>
+<li><a href="http://guides.emberjs.com/v2.0.0/routing/query-params/#toc_opting-into-a-full-transition">http://guides.emberjs.com/v2.0.0/routing/query-params/#toc_opting-into-a-full-transition</a></li>
+</ul>
+
+<h2>
+<a id="prerequisites" class="anchor" href="#prerequisites" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prerequisites</h2>
+
+<p>You will need the following things properly installed on your computer.</p>
+
+<ul>
+<li><a href="http://git-scm.com/">Git</a></li>
+<li>
+<a href="http://nodejs.org/">Node.js</a> (with NPM)</li>
+<li><a href="http://bower.io/">Bower</a></li>
+<li><a href="http://www.ember-cli.com/">Ember CLI</a></li>
+<li><a href="http://phantomjs.org/">PhantomJS</a></li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<ul>
+<li>
+<code>git clone &lt;repository-url&gt;</code> this repository</li>
+<li>change into the new directory</li>
+<li><code>npm install</code></li>
+<li><code>bower install</code></li>
+</ul>
+
+<h2>
+<a id="running--development" class="anchor" href="#running--development" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running / Development</h2>
+
+<ul>
+<li><code>ember server</code></li>
+<li>Visit your app at <a href="http://localhost:4200">http://localhost:4200</a>.</li>
+</ul>
+
+<h3>
+<a id="code-generators" class="anchor" href="#code-generators" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code Generators</h3>
+
+<p>Make use of the many generators for code, try <code>ember help generate</code> for more details</p>
+
+<h3>
+<a id="running-tests" class="anchor" href="#running-tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running Tests</h3>
+
+<ul>
+<li><code>ember test</code></li>
+<li><code>ember test --server</code></li>
+</ul>
+
+<h3>
+<a id="building" class="anchor" href="#building" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building</h3>
+
+<ul>
+<li>
+<code>ember build</code> (development)</li>
+<li>
+<code>ember build --environment production</code> (production)</li>
+</ul>
+
+<h3>
+<a id="deploying" class="anchor" href="#deploying" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deploying</h3>
+
+<p>Specify what it takes to deploy your app.</p>
+
+<h2>
+<a id="further-reading--useful-links" class="anchor" href="#further-reading--useful-links" aria-hidden="true"><span class="octicon octicon-link"></span></a>Further Reading / Useful Links</h2>
+
+<ul>
+<li><a href="http://emberjs.com/">ember.js</a></li>
+<li><a href="http://www.ember-cli.com/">ember-cli</a></li>
+<li>Development Browser Extensions
+
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi">ember inspector for chrome</a></li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/">ember inspector for firefox</a></li>
+</ul>
+</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/fuse-mars/ember-route-transition">Ember Pagination </a> is maintained by <a href="https://github.com/fuse-mars">fuse-mars</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
